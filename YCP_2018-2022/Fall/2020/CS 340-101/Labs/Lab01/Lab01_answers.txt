@@ -1,0 +1,7 @@
+•	Language 1
+	o	abb(aa)*
+•	Language 2
+	o	(ab)*| (ab)*a|(ba)*| (ba)*b
+•	Language 3
+	o	a*ba*(ba*b)*a*
+

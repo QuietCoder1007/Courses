@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Flags.h
+
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Node.h
+
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Queue.cpp
+Queue.h
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Queue.h
+Flags.h
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Flags.h
+
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Queue.h
+cassert
+-
+Node.h
+/home/llewis/CS_350_101/Exams/CS350_Exam01/Node.h
+

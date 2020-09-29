@@ -1,0 +1,11 @@
+Language 1
+	a*(c|c(ab)*)
+Language 2
+	a*(a+b)*a*
+Language 3
+	a*(ba*b)*a*
+Language 4
+	((a|b|c|((ab)|(ba)|(cb)))|(acb)|(cba))*
+	a*|(a+bc)*|b*|(ab)*|b*(ab)b*|a*(ab)a*
+Language 5
+	((aa)|(ab)|(ba)|(bb))|((aaa)|(aab)|(aba)|(baa)|(abb)|(bab)|(bba)|(bbb)|(bbc)|(bcb)|(cbb)|(bcc)|(cbc)|(ccb)|(ccc)|(abc)|(acb)|(bac)|(bca)|(cab)|(cba))

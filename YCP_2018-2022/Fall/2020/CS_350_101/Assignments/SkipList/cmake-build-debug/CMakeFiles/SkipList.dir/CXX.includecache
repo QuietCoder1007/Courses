@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/llewis/CS_350_101/Assignments/SkipList/Flags.h
+
+/home/llewis/CS_350_101/Assignments/SkipList/Node.h
+
+/home/llewis/CS_350_101/Assignments/SkipList/SkipList.cpp
+SkipList.h
+/home/llewis/CS_350_101/Assignments/SkipList/SkipList.h
+Flags.h
+/home/llewis/CS_350_101/Assignments/SkipList/Flags.h
+
+/home/llewis/CS_350_101/Assignments/SkipList/SkipList.h
+iostream
+-
+Node.h
+/home/llewis/CS_350_101/Assignments/SkipList/Node.h
+

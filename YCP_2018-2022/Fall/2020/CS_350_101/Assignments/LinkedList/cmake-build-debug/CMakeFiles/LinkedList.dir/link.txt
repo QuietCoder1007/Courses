@@ -1,0 +1,1 @@
+clang++   -std=c++11 -Wall -g   CMakeFiles/LinkedList.dir/LinkedList.cpp.o CMakeFiles/LinkedList.dir/tests.cpp.o  -o ../LinkedList  ../libLinkedList_Linux.a 

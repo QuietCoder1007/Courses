@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/llewis/CS_350_101/Assignments/LinkedList/Flags.h
+
+/home/llewis/CS_350_101/Assignments/LinkedList/LinkedList.cpp
+LinkedList.h
+/home/llewis/CS_350_101/Assignments/LinkedList/LinkedList.h
+Flags.h
+/home/llewis/CS_350_101/Assignments/LinkedList/Flags.h
+
+/home/llewis/CS_350_101/Assignments/LinkedList/LinkedList.h
+iostream
+-
+Node.h
+/home/llewis/CS_350_101/Assignments/LinkedList/Node.h
+
+/home/llewis/CS_350_101/Assignments/LinkedList/Node.h
+

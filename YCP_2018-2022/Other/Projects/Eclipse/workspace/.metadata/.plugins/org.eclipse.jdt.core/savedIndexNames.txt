@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\lqlas\OneDrive\Documents\YCP_2018-2022\Other\Projects\Eclipse\workspace\.metadata\.plugins\org.eclipse.jdt.core
+2736745236.index
+1143801610.index
+2872044937.index

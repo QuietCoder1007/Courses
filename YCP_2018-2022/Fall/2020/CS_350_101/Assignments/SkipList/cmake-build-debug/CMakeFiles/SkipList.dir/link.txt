@@ -1,0 +1,1 @@
+clang++   -std=c++11 -Wall -g   CMakeFiles/SkipList.dir/SkipList.cpp.o CMakeFiles/SkipList.dir/tests.cpp.o  -o ../SkipList  ../libSkipList_Linux.a 

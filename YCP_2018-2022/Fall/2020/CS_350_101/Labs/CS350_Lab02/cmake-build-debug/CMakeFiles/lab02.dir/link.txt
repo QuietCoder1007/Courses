@@ -1,0 +1,1 @@
+clang++   -std=c++11 -Wall -g   CMakeFiles/lab02.dir/main.cpp.o  -o ../lab02 

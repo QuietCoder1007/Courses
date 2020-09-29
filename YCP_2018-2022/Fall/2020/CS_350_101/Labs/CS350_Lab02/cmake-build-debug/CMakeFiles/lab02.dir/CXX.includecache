@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/llewis/CS_350_101/Labs/CS350_Lab02/main.cpp
+stack
+-
+string
+-
+iostream
+-
+cstdlib
+-
+
