@@ -30,17 +30,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CS370_Lab08/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Exams/CS370_Exam01/CMakeLists.txt" />
   </component>
   <component name="RunManager">
     <configuration name="fogScene" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fogScene" TARGET_NAME="fogScene" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fogScene" RUN_TARGET_NAME="fogScene">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -54,6 +49,8 @@
       <updated>1600792091960</updated>
       <workItem from="1600792092986" duration="235000" />
       <workItem from="1600793249942" duration="2519000" />
+      <workItem from="1601504875870" duration="396000" />
+      <workItem from="1601771154994" duration="220000" />
     </task>
     <servers />
   </component>

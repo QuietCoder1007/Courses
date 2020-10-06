@@ -1,0 +1,4 @@
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Fall/2020/CS 370-102/Assignments/CS370_Assign03/CS370_Assign03/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Fall/2020/CS 370-102/Assignments/CS370_Assign03/CS370_Assign03/cmake-build-debug/CMakeFiles/LimeLight.dir
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Fall/2020/CS 370-102/Assignments/CS370_Assign03/CS370_Assign03/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Fall/2020/CS 370-102/Assignments/CS370_Assign03/CS370_Assign03/cmake-build-debug/CMakeFiles/rebuild_cache.dir

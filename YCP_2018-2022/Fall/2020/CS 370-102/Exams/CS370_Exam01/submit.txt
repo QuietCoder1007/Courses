@@ -1,0 +1,15 @@
+CMakeLists.txt
+exam01.cpp
+submit.txt
+color_mesh.vert
+color_grad.vert
+color.frag
+utils.h
+utils.cpp
+vgl.h
+vmath.h
+objloader.h
+objloader.cpp
+include
+lib
+models

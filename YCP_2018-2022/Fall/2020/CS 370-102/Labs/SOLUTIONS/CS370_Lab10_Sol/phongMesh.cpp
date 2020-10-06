@@ -285,7 +285,6 @@ void render_scene( ) {
     glUniform1i(material_loc, MaterialIdx[Cube]);
     draw_object(Cube);
 
-
     // Draw sphere
     trans_matrix = translation(0.0f, 1.5f, 0.0f);
     rot_matrix = rotation(cube_angle, normalize(axis))*rotation(90.0f, 1.0f, 0.0f, 0.0f);
