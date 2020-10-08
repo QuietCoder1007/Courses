@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Queue" targetName="Queue" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e74ceec7-d19f-4256-a4a0-44d41e26ded9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="28" />
+    <option name="width" value="1682" />
+    <option name="height" value="989" />
+  </component>
+  <component name="ProjectId" id="1hsVfaRq3PTzRxCHVdr0PpXgLb2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Assignments/SkipList/CMakeLists.txt" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="CMake Application.Queue [ENQUEUE]">
+    <configuration name="Queue [CONSTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[CONSTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue [DEQUEUE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[DEQUEUE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue [DESTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[DESTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue [ENQUEUE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[ENQUEUE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue [ISEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[ISEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue [MAKEEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[MAKEEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="** Queue [ALL]" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Queue" TARGET_NAME="Queue" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Queue" RUN_TARGET_NAME="Queue">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.** Queue [ALL]" />
+      <item itemvalue="CMake Application.Queue [CONSTRUCTOR]" />
+      <item itemvalue="CMake Application.Queue [DEQUEUE]" />
+      <item itemvalue="CMake Application.Queue [DESTRUCTOR]" />
+      <item itemvalue="CMake Application.Queue [ENQUEUE]" />
+      <item itemvalue="CMake Application.Queue [ISEMPTY]" />
+      <item itemvalue="CMake Application.Queue [MAKEEMPTY]" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e74ceec7-d19f-4256-a4a0-44d41e26ded9" name="Default Changelist" comment="" />
+      <created>1533962913628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533962913628</updated>
+      <workItem from="1533962914888" duration="238000" />
+      <workItem from="1537503718424" duration="102000" />
+      <workItem from="1600799893099" duration="2422000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="503" y="985" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600802313697">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state x="503" y="985" width="424" height="491" key="FileChooserDialogImpl/0.28.1440.2398@0.28.1440.2398" timestamp="1600802313697" />
+    <state width="1392" height="716" key="GridCell.Tab.0.bottom" timestamp="1600802318335">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="1392" height="716" key="GridCell.Tab.0.bottom/0.28.1440.2398@0.28.1440.2398" timestamp="1600802318335" />
+    <state width="1392" height="716" key="GridCell.Tab.0.center" timestamp="1600802318334">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="1392" height="716" key="GridCell.Tab.0.center/0.28.1440.2398@0.28.1440.2398" timestamp="1600802318334" />
+    <state width="1392" height="716" key="GridCell.Tab.0.left" timestamp="1600802318334">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="1392" height="716" key="GridCell.Tab.0.left/0.28.1440.2398@0.28.1440.2398" timestamp="1600802318334" />
+    <state width="1392" height="716" key="GridCell.Tab.0.right" timestamp="1600802318334">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="1392" height="716" key="GridCell.Tab.0.right/0.28.1440.2398@0.28.1440.2398" timestamp="1600802318334" />
+  </component>
+</project>

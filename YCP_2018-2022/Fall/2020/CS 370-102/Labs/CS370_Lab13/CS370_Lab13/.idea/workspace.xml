@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="earthMoon" targetName="earthMoon" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d15c8e17-669d-4473-b60d-602171b148b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/DonQuixote.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/DonQuixote.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/DonQuixote.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/DonQuixote.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/MAKE_ZIP.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/solution.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/submit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/CS370_Assign01/submit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/assign01sol.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/assign01sol.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign01/assign01sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign01/assign01sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/RollinTrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/RollinTrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/bin/RollinTrain" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/bin/RollinTrain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/RollinTrain.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/RollinTrain.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/RollinTrain.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/RollinTrain.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/cmake-build-debug/RollinTrain.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assign02/CS370_Assign02/models/sphere.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assign/assignFigures.graffle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cs370-102.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../cs370-102.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/transHexagon.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/transHexagon.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/transHexagon.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/CMakeFiles/transHexagon.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab03/transHexagon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab03/transHexagon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/spinningHexagon.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/spinningHexagon.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/spinningHexagon.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/CMakeFiles/spinningHexagon.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab04/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/bin/orthoCube" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/bin/orthoCube" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/orthoCube.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/CMakeFiles/orthoCube.dir/orthoCube.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab05/orthoCube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab05/orthoCube.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/bin/frustumScene" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/bin/frustumScene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/frustumScene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/CMakeFiles/frustumScene.dir/frustumScene.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab06/frustumScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab06/frustumScene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/bin/shaderScene" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/bin/shaderScene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/CMakeFiles/shaderScene.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab07/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/fogScene.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/fogScene.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/fogScene.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/CMakeFiles/fogScene.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CS370_Lab08/fogScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CS370_Lab08/fogScene.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1hpmfA7cxGnYBIrfEDzWZjbizoE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="earthMoon" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="earthMoon" TARGET_NAME="earthMoon" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="earthMoon" RUN_TARGET_NAME="earthMoon">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1194" height="171" key="GridCell.Tab.0.bottom" timestamp="1600778807713">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="171" key="GridCell.Tab.0.bottom/63.23.1617.1027@63.23.1617.1027" timestamp="1600728792361" />
+    <state width="1194" height="171" key="GridCell.Tab.0.bottom/73.23.2487.1417@73.23.2487.1417" timestamp="1600721273889" />
+    <state width="1194" height="171" key="GridCell.Tab.0.bottom/79.23.2481.1417@79.23.2481.1417" timestamp="1600718468926" />
+    <state width="1194" height="171" key="GridCell.Tab.0.bottom/82.23.2478.1417@82.23.2478.1417" timestamp="1600778807713" />
+    <state width="1194" height="171" key="GridCell.Tab.0.center" timestamp="1600778807712">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="171" key="GridCell.Tab.0.center/63.23.1617.1027@63.23.1617.1027" timestamp="1600728792361" />
+    <state width="1194" height="171" key="GridCell.Tab.0.center/73.23.2487.1417@73.23.2487.1417" timestamp="1600721273888" />
+    <state width="1194" height="171" key="GridCell.Tab.0.center/79.23.2481.1417@79.23.2481.1417" timestamp="1600718468925" />
+    <state width="1194" height="171" key="GridCell.Tab.0.center/82.23.2478.1417@82.23.2478.1417" timestamp="1600778807712" />
+    <state width="1194" height="171" key="GridCell.Tab.0.left" timestamp="1600778807712">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="171" key="GridCell.Tab.0.left/63.23.1617.1027@63.23.1617.1027" timestamp="1600728792361" />
+    <state width="1194" height="171" key="GridCell.Tab.0.left/73.23.2487.1417@73.23.2487.1417" timestamp="1600721273888" />
+    <state width="1194" height="171" key="GridCell.Tab.0.left/79.23.2481.1417@79.23.2481.1417" timestamp="1600718468925" />
+    <state width="1194" height="171" key="GridCell.Tab.0.left/82.23.2478.1417@82.23.2478.1417" timestamp="1600778807712" />
+    <state width="1194" height="171" key="GridCell.Tab.0.right" timestamp="1600778807712">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="171" key="GridCell.Tab.0.right/63.23.1617.1027@63.23.1617.1027" timestamp="1600728792361" />
+    <state width="1194" height="171" key="GridCell.Tab.0.right/73.23.2487.1417@73.23.2487.1417" timestamp="1600721273889" />
+    <state width="1194" height="171" key="GridCell.Tab.0.right/79.23.2481.1417@79.23.2481.1417" timestamp="1600718468925" />
+    <state width="1194" height="171" key="GridCell.Tab.0.right/82.23.2478.1417@82.23.2478.1417" timestamp="1600778807712" />
+    <state width="1194" height="214" key="GridCell.Tab.1.bottom" timestamp="1600778699367">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="214" key="GridCell.Tab.1.bottom/79.23.2481.1417@79.23.2481.1417" timestamp="1600777518972" />
+    <state width="1194" height="214" key="GridCell.Tab.1.bottom/82.23.2478.1417@82.23.2478.1417" timestamp="1600778699367" />
+    <state width="1194" height="214" key="GridCell.Tab.1.center" timestamp="1600778699367">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="214" key="GridCell.Tab.1.center/79.23.2481.1417@79.23.2481.1417" timestamp="1600777518971" />
+    <state width="1194" height="214" key="GridCell.Tab.1.center/82.23.2478.1417@82.23.2478.1417" timestamp="1600778699367" />
+    <state width="1194" height="214" key="GridCell.Tab.1.left" timestamp="1600778699367">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="214" key="GridCell.Tab.1.left/79.23.2481.1417@79.23.2481.1417" timestamp="1600777518971" />
+    <state width="1194" height="214" key="GridCell.Tab.1.left/82.23.2478.1417@82.23.2478.1417" timestamp="1600778699367" />
+    <state width="1194" height="214" key="GridCell.Tab.1.right" timestamp="1600778699367">
+      <screen x="82" y="23" width="2478" height="1417" />
+    </state>
+    <state width="1194" height="214" key="GridCell.Tab.1.right/79.23.2481.1417@79.23.2481.1417" timestamp="1600777518972" />
+    <state width="1194" height="214" key="GridCell.Tab.1.right/82.23.2478.1417@82.23.2478.1417" timestamp="1600778699367" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/earthMoon.cpp</url>
+          <line>169</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

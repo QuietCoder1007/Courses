@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="house" targetName="house" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1746fbaa-080b-4db4-ab33-44172ed2c64c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="GLSL Shader" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1iOGZfYQzqMNa3nNGEH2FcGBIo0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lqlas\OneDrive\Documents\YCP_2018-2022\Fall\2020\CS 370-102\Assignments\CS370_Project\models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="house" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="house" TARGET_NAME="house" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="house" RUN_TARGET_NAME="house">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1746fbaa-080b-4db4-ab33-44172ed2c64c" name="Default Changelist" comment="" />
+      <created>1601771281619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601771281619</updated>
+      <workItem from="1601771282728" duration="3359000" />
+      <workItem from="1601789904421" duration="1795000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2318" y="505" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601788518674">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2318" y="505" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601788518674" />
+    <state x="1500" y="455" key="FileChooserDialogImpl" timestamp="1601790214848">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601790214848" />
+    <state x="2081" y="345" key="SettingsEditor" timestamp="1601790241983">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2081" y="345" key="SettingsEditor/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601790241983" />
+    <state x="2287" y="303" width="585" height="801" key="find.popup" timestamp="1601772487339">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2287" y="303" width="585" height="801" key="find.popup/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601772487339" />
+  </component>
+</project>

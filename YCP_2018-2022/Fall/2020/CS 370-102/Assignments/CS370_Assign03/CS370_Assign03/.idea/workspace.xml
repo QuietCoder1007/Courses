@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="LimeLight" targetName="MAKE_ZIP" />
+      <config projectName="LimeLight" targetName="LimeLight" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83afa886-68a9-4592-8f6f-34e94c6fb62f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1iOGoT4X7t5KNw6F7wM8VqkBRcB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CS370_Project/CMakeLists.txt" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager" selected="CMake Application.LimeLight">
+    <configuration name="LimeLight" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimeLight" TARGET_NAME="LimeLight" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimeLight" RUN_TARGET_NAME="LimeLight">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MAKE_ZIP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimeLight" TARGET_NAME="MAKE_ZIP" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.LimeLight" />
+      <item itemvalue="CMake Application.MAKE_ZIP" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83afa886-68a9-4592-8f6f-34e94c6fb62f" name="Default Changelist" comment="" />
+      <created>1601771399872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601771399872</updated>
+      <workItem from="1601771400917" duration="17928000" />
+      <workItem from="1601943832545" duration="1030000" />
+      <workItem from="1602001964230" duration="6966000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="458" key="FileChooserDialogImpl" timestamp="1601789902240">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="640" y="458" key="FileChooserDialogImpl/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601789902240" />
+    <state width="781" height="211" key="GridCell.Tab.0.bottom" timestamp="1602008864439">
+      <screen x="3440" y="-578" width="1440" height="2520" />
+    </state>
+    <state width="1674" height="211" key="GridCell.Tab.0.bottom/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1602006110757" />
+    <state width="781" height="211" key="GridCell.Tab.0.bottom/0.0.3440.1400/3440.-578.1440.2520@3440.-578.1440.2520" timestamp="1602008864439" />
+    <state width="781" height="211" key="GridCell.Tab.0.center" timestamp="1602008864439">
+      <screen x="3440" y="-578" width="1440" height="2520" />
+    </state>
+    <state width="1674" height="211" key="GridCell.Tab.0.center/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1602006110757" />
+    <state width="781" height="211" key="GridCell.Tab.0.center/0.0.3440.1400/3440.-578.1440.2520@3440.-578.1440.2520" timestamp="1602008864439" />
+    <state width="781" height="211" key="GridCell.Tab.0.left" timestamp="1602008864439">
+      <screen x="3440" y="-578" width="1440" height="2520" />
+    </state>
+    <state width="1674" height="211" key="GridCell.Tab.0.left/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1602006110756" />
+    <state width="781" height="211" key="GridCell.Tab.0.left/0.0.3440.1400/3440.-578.1440.2520@3440.-578.1440.2520" timestamp="1602008864439" />
+    <state width="781" height="211" key="GridCell.Tab.0.right" timestamp="1602008864439">
+      <screen x="3440" y="-578" width="1440" height="2520" />
+    </state>
+    <state width="1674" height="211" key="GridCell.Tab.0.right/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1602006110757" />
+    <state width="781" height="211" key="GridCell.Tab.0.right/0.0.3440.1400/3440.-578.1440.2520@3440.-578.1440.2520" timestamp="1602008864439" />
+    <state x="1945" y="0" width="1511" height="1386" key="dock-window-1" timestamp="1601772392812">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1945" y="0" width="1511" height="1386" key="dock-window-1/0.0.3440.1400/3440.-578.1440.2520@0.0.3440.1400" timestamp="1601772392812" />
+    <state x="3516" y="22" width="672" height="678" key="search.everywhere.popup" timestamp="1602006564976">
+      <screen x="3440" y="-578" width="1440" height="2520" />
+    </state>
+    <state x="3516" y="22" width="672" height="678" key="search.everywhere.popup/0.0.3440.1400/3440.-578.1440.2520@3440.-578.1440.2520" timestamp="1602006564976" />
+  </component>
+</project>

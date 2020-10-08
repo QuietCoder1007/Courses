@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="BST" targetName="BST" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5dca2e48-8a95-46c5-afe2-f7a0ef9141c7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1iZNlAgFWTXA9wKeMfgAiEJ9a2Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="CMake Application.** BST [ALL]">
+    <configuration name="BST [CONSTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[CONSTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [DESTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[DESTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDMAXNODE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDMAXNODE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDMAX]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDMAX]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDMINNODE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDMINNODE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDMIN]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDMIN]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDNODE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDNODE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDPARENTOF]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDPARENTOF]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FINDSUCCESSOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FINDSUCCESSOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [FIND]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FIND]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [INSERTNODE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[INSERTNODE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [INSERT]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[INSERT]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [ISEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[ISEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [MAKEEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[MAKEEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [REMOVEALLNODES]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[REMOVEALLNODES]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BST [REMOVE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[REMOVE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="** BST [ALL]" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BST" TARGET_NAME="BST" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BST" RUN_TARGET_NAME="BST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.** BST [ALL]" />
+      <item itemvalue="CMake Application.BST [CONSTRUCTOR]" />
+      <item itemvalue="CMake Application.BST [DESTRUCTOR]" />
+      <item itemvalue="CMake Application.BST [FINDMAXNODE]" />
+      <item itemvalue="CMake Application.BST [FINDMAX]" />
+      <item itemvalue="CMake Application.BST [FINDMINNODE]" />
+      <item itemvalue="CMake Application.BST [FINDMIN]" />
+      <item itemvalue="CMake Application.BST [FINDNODE]" />
+      <item itemvalue="CMake Application.BST [FINDPARENTOF]" />
+      <item itemvalue="CMake Application.BST [FINDSUCCESSOR]" />
+      <item itemvalue="CMake Application.BST [FIND]" />
+      <item itemvalue="CMake Application.BST [INSERTNODE]" />
+      <item itemvalue="CMake Application.BST [INSERT]" />
+      <item itemvalue="CMake Application.BST [ISEMPTY]" />
+      <item itemvalue="CMake Application.BST [MAKEEMPTY]" />
+      <item itemvalue="CMake Application.BST [REMOVEALLNODES]" />
+      <item itemvalue="CMake Application.BST [REMOVE]" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5dca2e48-8a95-46c5-afe2-f7a0ef9141c7" name="Default Changelist" comment="" />
+      <created>1533842043208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533842043208</updated>
+      <workItem from="1533842047922" duration="1145000" />
+      <workItem from="1533844397268" duration="10000" />
+      <workItem from="1533844544587" duration="62000" />
+      <workItem from="1533844682889" duration="37000" />
+      <workItem from="1541303135885" duration="41000" />
+      <workItem from="1541303261113" duration="16000" />
+      <workItem from="1602111306610" duration="12000" />
+      <workItem from="1602134011624" duration="3657000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

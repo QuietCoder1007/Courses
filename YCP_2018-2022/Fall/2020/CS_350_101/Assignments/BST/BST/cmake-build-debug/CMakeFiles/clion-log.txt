@@ -1,0 +1,7 @@
+"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\lqlas\OneDrive\Documents\GitHub\Courses\YCP_2018-2022\Fall\2020\CS_350_101\Assignments\BST\BST
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/lqlas/OneDrive/Documents/GitHub/Courses/YCP_2018-2022/Fall/2020/CS_350_101/Assignments/BST/BST/cmake-build-debug
+
+Cannot get compiler information:
+	Cannot run program "clang++" (in directory "C:\Users\lqlas\OneDrive\Documents\GitHub\Courses\YCP_2018-2022\Fall\2020\CS_350_101\Assignments\BST\BST\cmake-build-debug"): CreateProcess error=2, The system cannot find the file specified

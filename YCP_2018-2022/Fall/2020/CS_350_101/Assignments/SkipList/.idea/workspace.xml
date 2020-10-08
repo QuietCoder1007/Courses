@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="SkipList" targetName="SkipList" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3be2fd18-1bb0-4078-abe2-200c8cc398b6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1hsaaA879966gRAJGRMILrrfqNg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="CMake Application.SkipList [INSERT]">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [CONSTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[CONSTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [DESTRUCTOR]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[DESTRUCTOR]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [FIND]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[FIND]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [INSERT]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[INSERT]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [ISEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[ISEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [MAKEEMPTY]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[MAKEEMPTY]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [RANDOMLEVEL]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[RANDOMLEVEL]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkipList [REMOVE]" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="[REMOVE]" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="** SkipList [ALL]" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SkipList" TARGET_NAME="SkipList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SkipList" RUN_TARGET_NAME="SkipList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.** SkipList [ALL]" />
+      <item itemvalue="CMake Application.SkipList [CONSTRUCTOR]" />
+      <item itemvalue="CMake Application.SkipList [DESTRUCTOR]" />
+      <item itemvalue="CMake Application.SkipList [FIND]" />
+      <item itemvalue="CMake Application.SkipList [INSERT]" />
+      <item itemvalue="CMake Application.SkipList [ISEMPTY]" />
+      <item itemvalue="CMake Application.SkipList [MAKEEMPTY]" />
+      <item itemvalue="CMake Application.SkipList [RANDOMLEVEL]" />
+      <item itemvalue="CMake Application.SkipList [REMOVE]" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3be2fd18-1bb0-4078-abe2-200c8cc398b6" name="Default Changelist" comment="" />
+      <created>1533917628630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533917628630</updated>
+      <workItem from="1533917630902" duration="404000" />
+      <workItem from="1533918228278" duration="111000" />
+      <workItem from="1533918351110" duration="3000" />
+      <workItem from="1541303833490" duration="43000" />
+      <workItem from="1541303941755" duration="4000" />
+      <workItem from="1541303955282" duration="3000" />
+      <workItem from="1600802316351" duration="21870000" />
+      <workItem from="1600891200191" duration="2866000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="810" height="662" key="GridCell.Tab.0.bottom" timestamp="1600904354300">
+      <screen x="0" y="28" width="1440" height="2494" />
+    </state>
+    <state width="811" height="634" key="GridCell.Tab.0.bottom/0.28.1440.2398@0.28.1440.2398" timestamp="1600831072829" />
+    <state width="810" height="662" key="GridCell.Tab.0.bottom/0.28.1440.2494@0.28.1440.2494" timestamp="1600904354300" />
+    <state width="810" height="662" key="GridCell.Tab.0.center" timestamp="1600904354300">
+      <screen x="0" y="28" width="1440" height="2494" />
+    </state>
+    <state width="811" height="634" key="GridCell.Tab.0.center/0.28.1440.2398@0.28.1440.2398" timestamp="1600831072828" />
+    <state width="810" height="662" key="GridCell.Tab.0.center/0.28.1440.2494@0.28.1440.2494" timestamp="1600904354300" />
+    <state width="810" height="662" key="GridCell.Tab.0.left" timestamp="1600904354299">
+      <screen x="0" y="28" width="1440" height="2494" />
+    </state>
+    <state width="811" height="634" key="GridCell.Tab.0.left/0.28.1440.2398@0.28.1440.2398" timestamp="1600831072828" />
+    <state width="810" height="662" key="GridCell.Tab.0.left/0.28.1440.2494@0.28.1440.2494" timestamp="1600904354299" />
+    <state width="810" height="662" key="GridCell.Tab.0.right" timestamp="1600904354300">
+      <screen x="0" y="28" width="1440" height="2494" />
+    </state>
+    <state width="811" height="634" key="GridCell.Tab.0.right/0.28.1440.2398@0.28.1440.2398" timestamp="1600831072829" />
+    <state width="810" height="662" key="GridCell.Tab.0.right/0.28.1440.2494@0.28.1440.2494" timestamp="1600904354300" />
+    <state width="695" height="634" key="GridCell.Tab.1.bottom" timestamp="1600819387482">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="695" height="634" key="GridCell.Tab.1.bottom/0.28.1440.2398@0.28.1440.2398" timestamp="1600819387482" />
+    <state width="695" height="634" key="GridCell.Tab.1.center" timestamp="1600819387475">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="695" height="634" key="GridCell.Tab.1.center/0.28.1440.2398@0.28.1440.2398" timestamp="1600819387475" />
+    <state width="695" height="634" key="GridCell.Tab.1.left" timestamp="1600819387475">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="695" height="634" key="GridCell.Tab.1.left/0.28.1440.2398@0.28.1440.2398" timestamp="1600819387475" />
+    <state width="695" height="634" key="GridCell.Tab.1.right" timestamp="1600819387482">
+      <screen x="0" y="28" width="1440" height="2398" />
+    </state>
+    <state width="695" height="634" key="GridCell.Tab.1.right/0.28.1440.2398@0.28.1440.2398" timestamp="1600819387482" />
+  </component>
+</project>
