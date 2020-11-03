@@ -13,13 +13,14 @@ AATree<T>::AATree()
 {
     // TODO: Create sentinel node (i.e. bottomNode)
     // assign the sentinel node to root, lastNode, and deletedNode
-    root = bottomNode;
-    bottomNode = bottomNode;
-    lastNode = bottomNode;
-    deletedNode = bottomNode;
+    bottomNode = new Node<T>();
+    bottomNode->level = 0;
+    bottomNode->data = -1;
     bottomNode->left = bottomNode;
     bottomNode->right = bottomNode;
-    bottomNode->level = 0;
+    root = bottomNode;
+    lastNode = bottomNode;
+    deletedNode = bottomNode;
 }
 #endif
 
@@ -32,6 +33,13 @@ AATree<T>::~AATree()
     // TODO: Remove any nodes
     // don't forget to deallocate bottomNode
     makeEmpty();
+    root = bottomNode;
+    lastNode = bottomNode;
+    deletedNode = bottomNode;
+
+    delete root;
+    delete lastNode;
+    delete deletedNode;
 }
 #endif
 
@@ -39,9 +47,9 @@ AATree<T>::~AATree()
 
 #if ISEMPTY || ALL
 // TODO: isEmpty() method
-template<class T>
-bool AATree<T>::isEmpty() const{
-    return root == bottomNode && root->data == 0;
+template <class T>
+bool AATree<T>::isEmpty() {
+    return root == bottomNode;
 }
 #endif
 
@@ -51,6 +59,9 @@ bool AATree<T>::isEmpty() const{
 // TODO: find() method
 template <class T>
 bool AATree<T>::find(const T & x){
+//    if (isEmpty()){
+//        throw 1;
+//    }
     return findNode(root, x)->data == x;
 }
 #endif
@@ -62,10 +73,11 @@ bool AATree<T>::find(const T & x){
 // TODO: findNode() private method - iterative
 template <class T>
 Node<T> * AATree<T>::findNode(Node<T> * node, const T & x){
-    while(node != bottomNode && node->data){
-        if(x < node->data){
+//    Node<T> *node = node;
+    while(node != bottomNode && node->data != x){
+        if (x < node->data){
             node = node->left;
-        } else {
+        } else if (x > node->data) {
             node = node->right;
         }
     }
@@ -102,7 +114,11 @@ Node<T> * AATree<T>::findMinNode(Node<T> * node){
 // TODO: findMax() method
 template <class T>
 const T & AATree<T>::findMax(){
-    return findMaxNode(root)->data;
+    if (isEmpty()){
+        throw 1;
+    } else {
+        return findMaxNode(root)->data;
+    }
 }
 #endif
 
@@ -137,16 +153,19 @@ void AATree<T>::insert(const T & x){
 // TODO: insertNode() private method
 template<class T>
 void AATree<T>::insertNode(Node<T> * & node, const T & x){
-    if( !node ){
-        node = new Node<T>(x);
-    } else if( x < node->data ){
-        insert( node->left, x );
-    } else if( x > node->data  ){
-        insert( node->right, x );
+    if(!find(x)){
+        if (node == bottomNode){
+            node = new Node<T>(x, bottomNode, bottomNode, 1);
+        } else {
+            if( x < node->data ){
+                insertNode( node->left, x );
+            } else if( x > node->data  ){
+                insertNode( node->right, x );
+            }
+            skew(node);
+            split(node);
+        }
     }
-    node = skew( node );
-    node = split( node );
-    return node;
 }
 #endif
 
@@ -168,40 +187,30 @@ void AATree<T>::remove(const T & x){
 // TODO: removeNode() private method
 template<class T>
 void AATree<T>::removeNode(Node<T> * & node, const T & x){
-//    if( node->left->level < --node->level || node->right->level < node->level - 1 ) // check level of children{
-//        if( node->right->level > --node->level ) {                                  // check level of right horizontal children
-//            node->right->level = node->level;                                       // and decrement if necessary
-//        }
-//        node = skew( node );                                                    // First skew (may alter current root)
-//        node->right = skew( node->right );                                      // Second skew
-//        node->right->right = skew( node->right->right );                        // Third skew
-//        node = split( node );                                                   // First split (may alter current root)
-//        node->right = split( node->right );                                     // Second split
-//    }
-
-    if(node == bottomNode){
+    if(node != bottomNode){
         lastNode = node;
-        if (x < node->data){
-            removeNode(node->left, x)
+        if ( x < node->data ){
+            removeNode(node->left, x );
         } else {
             deletedNode = node;
             removeNode(node->right, x);
         }
-    } else if (node == lastNode && deletedNode = bottomNode && deletedNode->data == x){
-        deletedNode->data = node->data;
-        deletedNode = bottomNode;
-        node = node->right;
-        delete lastNode;
-    } else if node->left->level < --node->level || node->right->level < --node->level) {
-        --node->level;
-        if (node->right->level > node->level){
-            node->right->level = node->level;
+        if ( node == lastNode && deletedNode != bottomNode && x == deletedNode->data ){
+            deletedNode->data = node->data;
+            deletedNode = bottomNode;
+            node = node->right;
+            delete lastNode;
+        } else if ( node->left->level < node->level - 1 || node->right->level < node->level - 1 ) {
+            --node->level;
+            if ( node->right->level > node->level ){
+                node->right->level = node->level;
+            }
+            skew( node );
+            skew( node->right );
+            skew( node->right->right );
+            split( node );
+            split( node->right );
         }
-        skew(node);
-        skew(node->right);
-        skew(node->right->right);
-        split(node);
-        split(node->right);
     }
 }
 #endif
@@ -212,17 +221,14 @@ void AATree<T>::removeNode(Node<T> * & node, const T & x){
 // TODO: skew() private method
 template<class T>
 void AATree<T>::skew(Node<T> * & node){
-    Node<T> * new_node;
+    Node<T> * temp_node;
     if( node->left->level == node->level ){
-        new_node = node->left;
-        node->left = new_node->right;
-        new_node->right = node;
-    } else {
-        new_node = node->right;
-        node->right = new_node->left;
-        new_node->left = node;
+        temp_node = node;
+        node = node->left;
+        temp_node->left = node->right;
+        node->right = temp_node;
     }
-    return node;
+    
 }
 #endif
 
@@ -232,11 +238,14 @@ void AATree<T>::skew(Node<T> * & node){
 // TODO: split() private method
 template<class T>
 void AATree<T>::split(Node<T> * & node){
+    Node<T> * temp_node;
     if( node->right->right->level == node->level ) {
-        node = rotateWithRightChild( node );
-        node->level++;
+        temp_node = node;
+        node = node->right;
+        temp_node->right = node->left;
+        node->left = temp_node;
+        node->level++;    
     }
-    return node;
 }
 #endif
 
@@ -246,7 +255,8 @@ void AATree<T>::split(Node<T> * & node){
 // TODO: makeEmpty() method
 template<class T>
 void AATree<T>::makeEmpty() {
-    removeAllNodes(root);
+    removeAllNodes( root );
+    root = bottomNode;
 }
 #endif
 
@@ -256,10 +266,22 @@ void AATree<T>::makeEmpty() {
 // TODO: removeAllNodes() private method
 template<class T>
 void AATree<T>::removeAllNodes(Node<T> *node) {
-    for (int i = 0; i < 3; i ++ ){
+    if ( node != bottomNode ){
+        if( node->left ){
+            removeAllNodes( node->left );
+        }
 
+        if ( node->right ){
+            removeAllNodes( node->right );
+        }
+
+        if ( node != bottomNode ) {
+            delete node;
+            --node->level;
+        }
     }
 }
+
 #endif
 
 /* **************************************************************** */
