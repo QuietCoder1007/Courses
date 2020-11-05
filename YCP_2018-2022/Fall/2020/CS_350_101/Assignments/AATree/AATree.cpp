@@ -33,13 +33,7 @@ AATree<T>::~AATree()
     // TODO: Remove any nodes
     // don't forget to deallocate bottomNode
     makeEmpty();
-    root = bottomNode;
-    lastNode = bottomNode;
-    deletedNode = bottomNode;
-
-    delete root;
-    delete lastNode;
-    delete deletedNode;
+    delete bottomNode;
 }
 #endif
 
@@ -228,7 +222,7 @@ void AATree<T>::skew(Node<T> * & node){
         temp_node->left = node->right;
         node->right = temp_node;
     }
-    
+
 }
 #endif
 
@@ -244,7 +238,7 @@ void AATree<T>::split(Node<T> * & node){
         node = node->right;
         temp_node->right = node->left;
         node->left = temp_node;
-        node->level++;    
+        node->level++;
     }
 }
 #endif
@@ -274,11 +268,7 @@ void AATree<T>::removeAllNodes(Node<T> *node) {
         if ( node->right ){
             removeAllNodes( node->right );
         }
-
-        if ( node != bottomNode ) {
-            delete node;
-            --node->level;
-        }
+        delete node;
     }
 }
 
@@ -315,7 +305,7 @@ void AATree<T>::printNodesInOrder(Node<T> * node)
     int tail = 0;
     q[0] = node;
     tail++;
-    
+
     while (head != tail)
     {
         Node<T> *n = q[head];
