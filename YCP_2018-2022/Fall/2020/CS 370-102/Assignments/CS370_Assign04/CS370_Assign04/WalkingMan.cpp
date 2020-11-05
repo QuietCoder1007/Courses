@@ -71,13 +71,24 @@ const char *tex_frag_shader = "../basicTex.frag";
 
 // Global state
 mat4 proj_matrix;
+mat4 model_matrix;
 mat4 camera_matrix;
 vector<LightProperties> Lights;
 vector<MaterialProperties> Materials;
 GLuint numLights;
 
 // Scene graph nodes
+TexNode base;
 TexNode torso;
+MatNode left_upper_arm;
+MatNode right_upper_arm;
+MatNode left_lower_arm;
+MatNode right_lower_arm;
+MatNode left_upper_leg;
+//MatNode left_lower_leg;
+MatNode right_upper_leg;
+//MatNode right_lower_leg;
+//TexNode bball;
 
 
 // Elapsed time
@@ -237,7 +248,7 @@ void display( )
 }
 
 void render_scene( ) {
-    
+    traverse_scene_graph(&base, mat4().identity());
 }
 
 void traverse_scene_graph(BaseNode *node, mat4 baseTransform) {
@@ -354,7 +365,36 @@ void build_geometry( )
     };
 
     // TODO: Define texture coordinates for torso
-    vector<vec2> uvCoords;
+    vector<vec2> uvCoords = {
+            vec2(0.0f, 0.0f),
+            vec2(0.0f, 180.0f),
+            vec2(256.0f, 0.0f),
+            vec2(256.0f, 0.0f),     // FRONT
+            vec2(0.0f, 180.0f),
+            vec2(256.0f, 180.0f),
+
+            vec2(180.0f, 0.0f),
+            vec2(360.0f, 0.0f),
+            vec2(180.0f, 256.0f),
+            vec2(180.0f, 256.0f),     // BACK
+            vec2(360.0f, 256.0f),
+            vec2(360.0f, 0.0f),
+
+            vec2(360.0f, 0.0f),
+            vec2(436.0f, 0.0f),
+            vec2(360.0f, 227.0f),
+            vec2(360.0f, 227.0f),     // RIGHT
+            vec2(436.0f, 227.0f),
+            vec2(436.0f, 0.0f),
+
+            vec2(436.0f, 0.0f),
+            vec2(512.0f, 0.0f),
+            vec2(436.0f, 227.0f),
+            vec2(436.0f, 227.0f),     // LEFT
+            vec2(512.0f, 227.0f),
+            vec2(512.0f, 0.0f)
+
+    };
 
     numVertices[TexCube] = vertices.size();
     // Create and load object buffers
@@ -372,15 +412,20 @@ void build_geometry( )
     normals.clear();
     uvCoords.clear();
 
-    vertices.push_back(vec4(1.0f, 1.0f, 0.0f, 1.0f));
-    vertices.push_back(vec4(-1.0f, 1.0f, 0.0f, 1.0f));
-    vertices.push_back(vec4(-1.0f, -1.0f, 0.0f, 1.0f));
-    vertices.push_back(vec4(-1.0f, -1.0f, 0.0f, 1.0f));
-    vertices.push_back(vec4(1.0f, -1.0f, 0.0f, 1.0f));
-    vertices.push_back(vec4(1.0f, 1.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(3.0f, 3.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(-3.0f, 3.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(-3.0f, -3.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(-3.0f, -3.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(3.0f, -3.0f, 0.0f, 1.0f));
+    vertices.push_back(vec4(3.0f, 3.0f, 0.0f, 1.0f));
 
-   	// TODO: Define texture coordinates for background
-
+    // TODO: Define texture coordinates for background
+    uvCoords.push_back(vec2(2.0f, 2.0f));
+    uvCoords.push_back(vec2(-1.0f, 2.0f));
+    uvCoords.push_back(vec2(-1.0f, -1.0f));
+    uvCoords.push_back(vec2(-1.0f, -1.0f));
+    uvCoords.push_back(vec2(2.0f, -1.0f));
+    uvCoords.push_back(vec2(2.0f, 2.0f));
 
     normals.push_back(vec3(1.0f, 0.0f, 0.0f));
     normals.push_back(vec3(1.0f, 0.0f, 0.0f));
@@ -464,11 +509,18 @@ void build_materials( ) {
     };
 
 
-	// TODO: Make additional materials
+    // TODO: Make additional materials
+    MaterialProperties redGlass = {vec4(0.0f, 0.0f, 0.0f, 0.0f), //ambient
+                               vec4(0.78f, 0.00f, 0.00f, 0.35f), //diffuse
+                               vec4(0.99f, 0.91f, 0.81f, 1.0f), //specular
+                               15.0f, //shininess
+                               {0.0f, 0.0f, 0.0f}  //pad
+    };
 
 
     // Add materials to Materials vector
     Materials.push_back(skin);
+    Materials.push_back(redGlass);
 
 
     glGenBuffers(NumMaterialBuffers, MaterialBuffers);
@@ -615,10 +667,175 @@ void load_object(GLuint obj) {
 
 void draw_background(){
 	// TODO: Draw background using Background object
+    // Set anisotropic scaling
+    GLfloat xratio = 1.0f;
+    GLfloat yratio = 1.0f;
+    // If taller than wide adjust y
+    if (ww <= hh)
+    {
+        yratio = (GLfloat)hh / (GLfloat)ww;
+    }
+        // If wider than tall adjust x
+    else if (hh <= ww)
+    {
+        xratio = (GLfloat)ww / (GLfloat)hh;
+    }
+    // TODO: Set default orthographic projection
+    proj_matrix = ortho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
+
+    // TODO: Set default camera matrix
+    camera_matrix = mat4().identity();
+
+    // Select shader program
+    glUseProgram(tex_program);
+    // Pass projection matrix to shader
+    glUniformMatrix4fv(tex_proj_mat_loc, 1, GL_FALSE, proj_matrix);
+    // Pass camera matrix to shader
+    glUniformMatrix4fv(tex_camera_mat_loc, 1, GL_FALSE, camera_matrix);
+    // TODO: Set default model matrix
+    model_matrix = mat4().identity();
+    glUniformMatrix4fv(tex_model_mat_loc, 1, GL_FALSE, model_matrix);
+    glBindVertexArray(VAOs[Background]);
+    glBindBuffer(GL_ARRAY_BUFFER, ObjBuffers[Background][PosBuffer]);
+    glVertexAttribPointer(tex_vPos, posCoords, GL_FLOAT, GL_FALSE, 0, NULL);
+    glEnableVertexAttribArray(tex_vPos);
+    glBindBuffer(GL_ARRAY_BUFFER, ObjBuffers[Background][TexBuffer]);
+    glVertexAttribPointer(tex_vTex, texCoords, GL_FLOAT, GL_FALSE, 0, NULL);
+    glEnableVertexAttribArray(tex_vTex);
+    // TODO: Bind background texture id
+    glBindTexture(GL_TEXTURE_2D, TextureIDs[YCP]);
+    // TODO: Draw background with depth buffer writes disabled
+    glDepthMask(GL_FALSE);
+    glDrawArrays(GL_TRIANGLES, 0, numVertices[YCP]);
+    glDepthMask(GL_TRUE);
 }
 
 void build_scene_graph( ) {
+    // TODO: MILESTONE 1
     // TODO: Add scene graph nodes
+    // TODO: Add base node
+    base.set_shader(tex_program, tex_proj_mat_loc, tex_camera_mat_loc, tex_model_mat_loc);
+    base.set_buffers(VAOs[Sphere], ObjBuffers[Sphere][PosBuffer], tex_vPos, posCoords, ObjBuffers[Sphere][TexBuffer], tex_vTex, texCoords, numVertices[Sphere]);
+    base.TexID = TextureIDs[Face];
+    base.set_base_transform(translate(0.0f, HEAD_HEIGHT+TORSO_HEIGHT, 0.0f)*rotate(180.0f, 1.0f, 0.0f, 0.0f)*scale(vec3(HEAD_WIDTH, HEAD_HEIGHT, HEAD_DEPTH)));
+    base.sibling = nullptr;
+    base.child = &torso;
+
+    // TODO: Add torso node
+    torso.set_shader(tex_program, tex_proj_mat_loc, tex_camera_mat_loc, tex_model_mat_loc);
+    torso.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][TexBuffer], light_vNorm, normCoords, numVertices[TexCube]);
+    torso.TexID = TextureIDs[Shirt];
+    torso.set_base_transform(translate(vec3(1.0f, 0.0f, 1.0f))*scale(vec3(TORSO_WIDTH, TORSO_HEIGHT, TORSO_DEPTH)));
+    torso.sibling = &left_upper_arm;
+    torso.child = &left_upper_leg;
+
+    // TODO: Add left upper arm node
+    left_upper_arm.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+    left_upper_arm.NormMatPtr = light_norm_mat_loc;
+    left_upper_arm.set_buffers(VAOs[Cube], ObjBuffers[Cube][PosBuffer], light_vPos, posCoords, ObjBuffers[Cube][NormBuffer], light_vNorm, normCoords, numVertices[Cube]);
+    left_upper_arm.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Skin, false);
+    left_upper_arm.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+    left_upper_arm.set_eye(light_eye_loc, eye);
+    left_upper_arm.set_base_transform(translate((TORSO_WIDTH+UPPER_ARM_WIDTH)*1.2f, UPPER_ARM_HEIGHT, 0.0f)*scale(vec3(UPPER_ARM_WIDTH, UPPER_ARM_HEIGHT, UPPER_ARM_DEPTH)));
+    left_upper_arm.sibling = &right_upper_arm;
+    left_upper_arm.child = &left_lower_arm;
+
+    // TODO: Add right upper arm node
+    right_upper_arm.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+    right_upper_arm.NormMatPtr = light_norm_mat_loc;
+    right_upper_arm.set_buffers(VAOs[Cube], ObjBuffers[Cube][PosBuffer], light_vPos, posCoords, ObjBuffers[Cube][NormBuffer], light_vNorm, normCoords, numVertices[Cube]);
+    right_upper_arm.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Skin, false);
+    right_upper_arm.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+    right_upper_arm.set_eye(light_eye_loc, eye);
+    right_upper_arm.set_base_transform(translate((-TORSO_WIDTH-UPPER_ARM_WIDTH)*1.2f, UPPER_ARM_HEIGHT, 0.0f)*scale(vec3(UPPER_ARM_WIDTH, UPPER_ARM_HEIGHT, UPPER_ARM_DEPTH)));
+    right_upper_arm.sibling = nullptr;
+    right_upper_arm.child = &right_lower_arm;
+
+    // TODO: MILESTONE 1 END
+
+//    // TODO: Add left lower arm node
+//    left_lower_arm.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    left_lower_arm. = light_norm_mat_loc;
+//    left_lower_arm.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    left_lower_arm.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    left_lower_arm.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    left_lower_arm.set_eye(light_eye_loc, eye);
+//    left_lower_arm.set_base_transform(scale(vec3(LOWER_ARM_WIDTH, LOWER_ARM_HEIGHT, LOWER_ARM_DEPTH)));
+//    left_lower_arm.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    left_lower_arm.sibling = nullptr;
+//    left_lower_arm.child = &&bball;
+
+//    // TODO: Add right lower arm node
+//    right_lower_arm.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    right_lower_arm. = light_norm_mat_loc;
+//    right_lower_arm.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    right_lower_arm.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    right_lower_arm.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    right_lower_arm.set_eye(light_eye_loc, eye);
+//    right_lower_arm.set_base_transform(scale(vec3(LOWER_ARM_WIDTH, LOWER_ARM_HEIGHT, LOWER_ARM_DEPTH)));
+//    right_lower_arm.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    right_lower_arm.sibling = nullptr;
+//    right_lower_arm.child = &right_lower_arm;
+
+//    // TODO: Add left upper leg node
+//    left_upper_leg.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    left_upper_leg. = light_norm_mat_loc;
+//    left_upper_leg.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    left_upper_leg.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    left_upper_leg.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    left_upper_leg.set_eye(light_eye_loc, eye);
+//    left_upper_leg.set_base_transform(scale(vec3(UPPER_LEG_WIDTH, UPPER_LEG_HEIGHT, UPPER_LEG_DEPTH)));
+//    left_upper_leg.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    left_upper_leg.sibling = &left_upper_leg;
+//    left_upper_leg.child = &left_lower_leg;
+
+//    // TODO: Add right upper leg node
+//    right_upper_leg.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    right_upper_leg. = light_norm_mat_loc;
+//    right_upper_leg.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    right_upper_leg.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    right_upper_leg.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    right_upper_leg.set_eye(light_eye_loc, eye);
+//    right_upper_leg.set_base_transform(scale(vec3(UPPER_LEG_WIDTH, UPPER_LEG_HEIGHT, UPPER_LEG_DEPTH)));
+//    right_upper_leg.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    right_upper_leg.sibling = nullptr;
+//    right_upper_leg.child = &right_lower_leg;
+
+//    // TODO: Add left lower leg node
+//    left_lower_leg.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    left_lower_leg. = light_norm_mat_loc;
+//    left_lower_leg.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    left_lower_leg.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    left_lower_leg.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    left_lower_leg.set_eye(light_eye_loc, eye);
+//    left_lower_leg.set_base_transform(scale(vec3(LOWER_LEG_WIDTH, LOWER_LEG_HEIGHT, LOWER_LEG_DEPTH)));
+//    left_lower_leg.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    left_lower_leg.sibling = nullptr;
+//    left_lower_leg.child = &bball;
+
+//    // TODO: Add right lower leg node
+//    right_lower_leg.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    right_lower_leg. = light_norm_mat_loc;
+//    right_lower_leg.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    right_lower_leg.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    right_lower_leg.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    right_lower_leg.set_eye(light_eye_loc, eye);
+//    right_lower_leg.set_base_transform(scale(vec3(LOWER_LEG_WIDTH, LOWER_LEG_HEIGHT, LOWER_LEG_DEPTH)));
+//    right_lower_leg.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    right_lower_leg.sibling = nullptr;
+//    right_lower_leg.child = &right_lower_leg;
+
+//    // TODO: Add basketball node
+//    bball.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
+//    bball. = light_norm_mat_loc;
+//    bball.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
+//    bball.(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, Materials[Skin]);
+//    bball.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+//    bball.set_eye(light_eye_loc, eye);
+//    bball.set_base_transform(scale(vec3(1.0f, 1.0f, 1.0f)));
+//    bball.update_transform(rotate(theta, vec3(0.0f, 1.0f, 0.0f)));
+//    bball.sibling = nullptr;
+//    bball.child = nullptr;
 
 }
 
