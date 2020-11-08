@@ -293,30 +293,35 @@ void build_geometry( )
             vec4(-1.0f, 1.0f,  1.0f, 1.0f),
             vec4(-1.0f, -1.0f, 1.0f, 1.0f),
             vec4(1.0f,  -1.0f, 1.0f, 1.0f),
+
             vec4(-1.0f, -1.0f, -1.0f, 1.0f),   // back
             vec4(-1.0f, 1.0f,  -1.0f, 1.0f),
             vec4(1.0f,  1.0f,  -1.0f, 1.0f),
             vec4(1.0f,  1.0f,  -1.0f, 1.0f),
             vec4(1.0f,  -1.0f, -1.0f, 1.0f),
             vec4(-1.0f, -1.0f, -1.0f, 1.0f),
+
             vec4(-1.0f, -1.0f, -1.0f, 1.0f),   // left
             vec4(-1.0f, -1.0f, 1.0f, 1.0f),
             vec4(-1.0f, 1.0f,  1.0f, 1.0f),
             vec4(-1.0f, 1.0f,  1.0f, 1.0f),
             vec4(-1.0f, 1.0f,  -1.0f, 1.0f),
             vec4(-1.0f, -1.0f, -1.0f, 1.0f),
+
             vec4(1.0f,  -1.0f, -1.0f, 1.0f),   // right
             vec4(1.0f,  1.0f,  -1.0f, 1.0f),
             vec4(1.0f,  1.0f,  1.0f, 1.0f),
             vec4(1.0f,  1.0f,  1.0f, 1.0f),
             vec4(1.0f,  -1.0f, 1.0f, 1.0f),
             vec4(1.0f,  -1.0f, -1.0f, 1.0f),
+
             vec4(-1.0f, 1.0f,  -1.0f, 1.0f),   // top
             vec4(-1.0f, 1.0f,  1.0f, 1.0f),
             vec4(1.0f,  1.0f,  1.0f, 1.0f),
             vec4(1.0f,  1.0f,  1.0f, 1.0f),
             vec4(1.0f,  1.0f,  -1.0f, 1.0f),
             vec4(-1.0f, 1.0f,  -1.0f, 1.0f),
+
             vec4(-1.0f, -1.0f, -1.0f, 1.0f),   // bottom
             vec4(1.0f,  -1.0f, -1.0f, 1.0f),
             vec4(1.0f,  -1.0f, 1.0f, 1.0f),
@@ -366,33 +371,33 @@ void build_geometry( )
 
     // TODO: Define texture coordinates for torso
     vector<vec2> uvCoords = {
+            vec2(180.0f/512.0f, -256.0f/256.0f),
+            vec2(180.0f/512.0f, 0.0f),
             vec2(0.0f, 0.0f),
-            vec2(0.0f, 180.0f),
-            vec2(256.0f, 0.0f),
-            vec2(256.0f, 0.0f),     // FRONT
-            vec2(0.0f, 180.0f),
-            vec2(256.0f, 180.0f),
+            vec2(0.0f, 0.0f),
+            vec2(0.0f, -256.0f/256.0f),     // FRONT
+            vec2(180.0f/512.0f, -256.0f/256.0f),
 
-            vec2(180.0f, 0.0f),
-            vec2(360.0f, 0.0f),
-            vec2(180.0f, 256.0f),
-            vec2(180.0f, 256.0f),     // BACK
-            vec2(360.0f, 256.0f),
-            vec2(360.0f, 0.0f),
+            vec2(180.0f/512.0f, -256.0f/256.0f),
+            vec2(180.0f/512.0f, 0.0f),
+            vec2(360.0f/512.0f, 0.0f),
+            vec2(360.0f/512.0f, 0.0f),
+            vec2(360.0f/512.0f, -256.0f/256.0f),
+            vec2(180.0f/512.0f, -256.0f/256.0f),     // BACK
 
-            vec2(360.0f, 0.0f),
-            vec2(436.0f, 0.0f),
-            vec2(360.0f, 227.0f),
-            vec2(360.0f, 227.0f),     // RIGHT
-            vec2(436.0f, 227.0f),
-            vec2(436.0f, 0.0f),
+            vec2(360.0f/512.0f, -227.0f/256.0f),
+            vec2(436.0f/512.0f, -227.0f/256.0f),
+            vec2(436.0f/512.0f, 0.0f),
+            vec2(436.0f/512.0f, 0.0f),
+            vec2(360.0f/512.0f, 0.0f),
+            vec2(360.0f/512.0f, -227.0f/256.0f),     // RIGHT
 
-            vec2(436.0f, 0.0f),
-            vec2(512.0f, 0.0f),
-            vec2(436.0f, 227.0f),
-            vec2(436.0f, 227.0f),     // LEFT
-            vec2(512.0f, 227.0f),
-            vec2(512.0f, 0.0f)
+            vec2(512.0f/512.0f, -227.0f/256.0f),
+            vec2(512.0f/512.0f, 0.0f),
+            vec2(436.0f/512.0f, 0.0f),
+            vec2(436.0f/512.0f, 0.0f),
+            vec2(436.0f/512.0f, -227.0f/256.0f),     // LEFT
+            vec2(512.0f/512.0f, -227.0f/256.0f),
 
     };
 
@@ -723,7 +728,7 @@ void build_scene_graph( ) {
 
     // TODO: Add torso node
     torso.set_shader(tex_program, tex_proj_mat_loc, tex_camera_mat_loc, tex_model_mat_loc);
-    torso.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], light_vPos, posCoords, ObjBuffers[TexCube][TexBuffer], light_vNorm, normCoords, numVertices[TexCube]);
+    torso.set_buffers(VAOs[TexCube], ObjBuffers[TexCube][PosBuffer], tex_vPos, posCoords, ObjBuffers[TexCube][TexBuffer], tex_vTex, texCoords, numVertices[TexCube]);
     torso.TexID = TextureIDs[Shirt];
     torso.set_base_transform(translate(vec3(1.0f, 0.0f, 1.0f))*scale(vec3(TORSO_WIDTH, TORSO_HEIGHT, TORSO_DEPTH)));
     torso.sibling = &left_upper_arm;
