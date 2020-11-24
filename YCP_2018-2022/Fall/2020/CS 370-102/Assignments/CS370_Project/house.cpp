@@ -5,7 +5,6 @@
 #include "stb_image.h"	// Sean Barrett's image loader - http://nothings.org/
 #include <stdio.h>
 //#include <irrKlang>
-#include "glerror_utility.h"
 #include <vector>
 #include "vgl.h"
 #include "objloader.h"
@@ -18,19 +17,17 @@
 using namespace vmath;
 using namespace std;
 
-enum VAO_IDs {Cone, Cube, Cylinder, Donut, Octahedron, Sphere, Torus, NumVAOs};
-enum Buffer_IDs {ConePosBuffer, CubePosBuffer, CylinderPosBuffer, DonutPosBuffer, OctaPosBuffer, SpherePosBuffer, TorusPosBuffer, NumBuffers};
+enum VAO_IDs {Cube, NumVAOs};
+enum Buffer_IDs {CubePosBuffer, NumBuffers};
 
 GLuint VAOs[NumVAOs];
 GLuint Buffers[NumBuffers];
 
 GLint numVertices[NumVAOs];
 GLint posCoords = 4;
-vec4 wall_color = {1.0f, 1.0f, 0.0f,1.0f};
-vec4 tree_color = {0.63f, 0.32f, 0.18f,1.0f};
-vec4 stone_color = {0.5f, 0.5f, 0.0f,1.0f};
-vec4 donut_color = {1.0f, 0.75f, 0.8f,1.0f};
-vec4 grass_color = {0.0f, 0.75f, 0.1f,1.0f};
+vec4 cube_color_r = {1.0f, 0.0f, 0.0f,1.0f};
+vec4 cube_color_g = {0.0f, 1.0f, 0.0f,1.0f};
+vec4 cube_color_b = {0.0f, 0.0f, 1.0f,1.0f};
 
 // Camera
 vec3 eye = {3.0f, 3.0f, 0.0f};
@@ -48,7 +45,7 @@ const char *vertex_shader = "../color_mesh.vert";
 const char *frag_shader = "../color_mesh.frag";
 
 // Global state
-const char *models[NumVAOs] = {"../models/cone.obj", "../models/cube.obj", "../models/cylinder.obj", "../models/donut.obj", "../models/octahedron.obj", "../models/sphere.obj", "../models/torus.obj", };
+const char *models[NumVAOs] = {"../models/cube.obj"};
 mat4 proj_matrix;
 mat4 camera_matrix;
 vec3 axis = {0.0f, 1.0f, 0.0f};
@@ -75,62 +72,55 @@ void draw_obj(GLuint VAO, GLuint Buffer, int numVert);
 
 int main(int argc, char**argv)
 {
-    try {
-        // Create OpenGL window
-        GLFWwindow *window = CreateWindow("Think Inside The Box");
-        if (!window) {
-            fprintf(stderr, "ERROR: could not open window with GLFW3\n");
-            glfwTerminate();
-            return 1;
-        } else {
-            printf("OpenGL window successfully created\n");
-        }
+	// Create OpenGL window
+	GLFWwindow* window = CreateWindow("Think Inside The Box");
+    if (!window) {
+        fprintf(stderr, "ERROR: could not open window with GLFW3\n");
+        glfwTerminate();
+        return 1;
+    } else {
+        printf("OpenGL window successfully created\n");
+    }
 
-        // Store initial window size
-        glfwGetFramebufferSize(window, &ww, &hh);
+    // Store initial window size
+    glfwGetFramebufferSize(window, &ww, &hh);
 
-        // Register callbacks
-        glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-        glfwSetKeyCallback(window, key_callback);
-        glfwSetMouseButtonCallback(window, mouse_callback);
+    // Register callbacks
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetKeyCallback(window,key_callback);
+    glfwSetMouseButtonCallback(window, mouse_callback);
 
-        // Create geometry buffers
-        build_geometry();
+	// Create geometry buffers
+    build_geometry();
+    
+    // Load shaders and associate shader variables
+	ShaderInfo shaders[] = { {GL_VERTEX_SHADER, vertex_shader},{GL_FRAGMENT_SHADER, frag_shader},{GL_NONE, NULL} };
+	program = LoadShaders(shaders);
+    vPos = glGetAttribLocation(program, "vPosition");
+    vCol = glGetUniformLocation(program, "vColor");
+    model_mat_loc = glGetUniformLocation(program, "model_matrix");
+    proj_mat_loc = glGetUniformLocation(program, "proj_matrix");
+    cam_mat_loc = glGetUniformLocation(program, "camera_matrix");
 
-        // Load shaders and associate shader variables
-        ShaderInfo shaders[] = {{GL_VERTEX_SHADER,   vertex_shader},
-                                {GL_FRAGMENT_SHADER, frag_shader},
-                                {GL_NONE, NULL}};
-        program = LoadShaders(shaders);
-        vPos = glGetAttribLocation(program, "vPosition");
-        vCol = glGetUniformLocation(program, "vColor");
-        model_mat_loc = glGetUniformLocation(program, "model_matrix");
-        proj_mat_loc = glGetUniformLocation(program, "proj_matrix");
-        cam_mat_loc = glGetUniformLocation(program, "camera_matrix");
+    // Enable depth test
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
 
-        // Enable depth test
-        glEnable(GL_CULL_FACE);
-        glEnable(GL_DEPTH_TEST);
+    // Set Initial camera position
+    GLfloat x, y, z;
+    x = (GLfloat)(radius*sin(azimuth*DEG2RAD)*sin(elevation*DEG2RAD));
+    y = (GLfloat)(radius*cos(elevation*DEG2RAD));
+    z = (GLfloat)(radius*cos(azimuth*DEG2RAD)*sin(elevation*DEG2RAD));
+    eye = vec3(x, y, z);
 
-        // Set Initial camera position
-        GLfloat x, y, z;
-        x = (GLfloat) (radius * sin(azimuth * DEG2RAD) * sin(elevation * DEG2RAD));
-        y = (GLfloat) (radius * cos(elevation * DEG2RAD));
-        z = (GLfloat) (radius * cos(azimuth * DEG2RAD) * sin(elevation * DEG2RAD));
-        eye = vec3(x, y, z);
-
-        // Start loop
-        while (!glfwWindowShouldClose(window)) {
-            // Draw graphics
-            display();
-            // Update other events like input handling
-            glfwPollEvents();
-            // Swap buffer onto screen
-            glfwSwapBuffers(window);
-        }
-
-    } catch (const std::exception & e) {
-        std::cerr << "Exception: " << e.what() << "\n";
+    // Start loop
+    while ( !glfwWindowShouldClose( window ) ) {
+    	// Draw graphics
+        display();
+        // Update other events like input handling
+        glfwPollEvents();
+        // Swap buffer onto screen
+        glfwSwapBuffers( window );
     }
 
     // Close window
@@ -156,70 +146,11 @@ void build_geometry( )
     loadOBJ(models[Cube], vertices, uvCoords, normals);
     numVertices[Cube] = vertices.size();
 
-    // Bind cone vertex positions
+
+    // Bind cube vertex positions
     glBindBuffer(GL_ARRAY_BUFFER, Buffers[CubePosBuffer]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Cube], vertices.data(), GL_STATIC_DRAW);
 
-    glBindVertexArray(VAOs[Cone]);
-
-    // TODO: Load cone model and store number of vertices
-    loadOBJ(models[Cone], vertices, uvCoords, normals);
-    numVertices[Cone] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[ConePosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Cone], vertices.data(), GL_STATIC_DRAW);
-
-    glBindVertexArray(VAOs[Cylinder]);
-
-    // TODO: Load cylinder model and store number of vertices
-    loadOBJ(models[Cylinder], vertices, uvCoords, normals);
-    numVertices[Cylinder] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[CylinderPosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Cylinder], vertices.data(), GL_STATIC_DRAW);
-
-    glBindVertexArray(VAOs[Donut]);
-
-    // TODO: Load donut model and store number of vertices
-    loadOBJ(models[Donut], vertices, uvCoords, normals);
-    numVertices[Donut] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[DonutPosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Donut], vertices.data(), GL_STATIC_DRAW);
-
-
-    glBindVertexArray(VAOs[Octahedron]);
-
-    // TODO: Load octahedron model and store number of vertices
-    loadOBJ(models[Octahedron], vertices, uvCoords, normals);
-    numVertices[Octahedron] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[OctaPosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Octahedron], vertices.data(), GL_STATIC_DRAW);
-
-    glBindVertexArray(VAOs[Sphere]);
-
-    // TODO: Load sphere model and store number of vertices
-    loadOBJ(models[Sphere], vertices, uvCoords, normals);
-    numVertices[Sphere] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[SpherePosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Sphere], vertices.data(), GL_STATIC_DRAW);
-
-    glBindVertexArray(VAOs[Torus]);
-
-    // TODO: Load torus model and store number of vertices
-    loadOBJ(models[Torus], vertices, uvCoords, normals);
-    numVertices[Torus] = vertices.size();
-
-    // Bind cube vertex positions
-    glBindBuffer(GL_ARRAY_BUFFER, Buffers[TorusPosBuffer]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[Torus], vertices.data(), GL_STATIC_DRAW);
 }
 
 void display( )
@@ -246,7 +177,7 @@ void display( )
     }
 
     // TODO: Set perspective projection matrix
-    proj_matrix = ortho(-6.0f*xratio, 6.0f*xratio, -6.0f*yratio, 6.0f*yratio, -6.0f, 16.0f);
+    proj_matrix = ortho(-1.0f*xratio, 1.0f*xratio, -2.0f*yratio, 3.0f*yratio, -6.0f, 6.0f);
 
     // TODO: Set camera matrix
     camera_matrix = lookat(eye, center, up);
@@ -273,96 +204,92 @@ void render_scene( ) {
     glUniformMatrix4fv(cam_mat_loc, 1, GL_FALSE, camera_matrix);
 
     // Set cube transformation matrix
-    trans_matrix = translate(0.0f, 0.50f, 2.25f);
-    rot_matrix = rotate(90.0f, vec3(1.0f, 0.0f, 0.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
+    trans_matrix = translate(0.0f, 0.0f, 0.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
 	model_matrix = trans_matrix*rot_matrix*scale_matrix;
 	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, wall_color);
+	glUniform4fv(vCol, 1, cube_color_g);
 
 	// TODO: Draw cube
 	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
 
     // Set cube transformation matrix
-    trans_matrix = translate(0.0f, 0.50f, -2.25f);
-    rot_matrix = rotate(90.0f, vec3(1.0f, 0.0f, 0.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
-	model_matrix = trans_matrix*rot_matrix*scale_matrix;
-	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, wall_color);
-
-	// TODO: Draw cube
-	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
-
-    // Set cube transformation matrix
-    trans_matrix = translate(2.25f, 0.50f, 0.0f);
-    rot_matrix = rotate(90.0f, vec3(0.0f, 0.0f, 1.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
-	model_matrix = trans_matrix*rot_matrix*scale_matrix;
-	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, wall_color);
-
-	// TODO: Draw cube
-	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
-
-    // Set cube transformation matrix
-    trans_matrix = translate(-2.25f, 0.50f, 0.0f);
-    rot_matrix = rotate(90.0f, vec3(0.0f, 0.0f, 1.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
-	model_matrix = trans_matrix*rot_matrix*scale_matrix;
-	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, wall_color);
-
-	// TODO: Draw cube
-	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
-
-    // TODO: FLOOR
-    // Set cube transformation matrix
-    trans_matrix = translate(0.0f, -1.75f, 0.0f);
-    rot_matrix = rotate(0.0f, vec3(0.0f, 1.0f, 0.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
-	model_matrix = trans_matrix*rot_matrix*scale_matrix;
-	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, wall_color);
-
-	// TODO: Draw cube
-	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
-
-
-    // TODO: Tree
-    // Set cube transformation matrix
-    trans_matrix = translate(0.0f, 0.50f, 0.0f);
-    rot_matrix = rotate(0.0f, vec3(0.0f, 1.0f, 0.0f));
-    scale_matrix = scale(0.250f, 1.0f, 0.250f);
+    trans_matrix = translate(0.0f, 0.0f, 0.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 0.10f, 4.0f);
     model_matrix = trans_matrix*rot_matrix*scale_matrix;
     glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-    glUniform4fv(vCol, 1, tree_color);
-
-    draw_obj(VAOs[Cylinder], Buffers[CylinderPosBuffer], numVertices[Cylinder]);
-
-    // TODO: Donut
-    // Set Donut transformation matrix
-    trans_matrix = translate(0.0f, 3.50f, 0.0f);
-    rot_matrix = rotate(0.0f, vec3(0.0f, 1.0f, 0.0f));
-    scale_matrix = scale(1.0f, 1.0f, 1.0f);
-    model_matrix = trans_matrix*rot_matrix*scale_matrix;
-    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-    glUniform4fv(vCol, 1, tree_color);
-
-//    draw_obj(VAOs[Donut], Buffers[DonutPosBuffer], numVertices[Donut]);
-//    thigle(EXC_MSG("Failed to draw Donut"));
-
-    // TODO: GRASS
-    // Set cube transformation matrix
-    trans_matrix = translate(9.0f, -3.0f, 0.0f);
-    rot_matrix = rotate(0.0f, vec3(0.0f, 1.0f, 0.0f));
-    scale_matrix = scale(2.0f, 0.5f, 2.0f);
-    model_matrix = trans_matrix*rot_matrix*scale_matrix;
-    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-    glUniform4fv(vCol, 1, grass_color);
+    glUniform4fv(vCol, 1, cube_color_b);
 
     // TODO: Draw cube
     draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+
+    trans_matrix = translate(0.0f, 0.0f, 4.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    trans_matrix = translate(0.0f, 0.0f, -4.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(2.0f, 0.0f, 2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(2.0f, 0.0f, -2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(-2.0f, 0.0f, 2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(-2.0f, 0.0f, -2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
 }
 
 void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
@@ -436,24 +363,6 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
     ww = width;
     hh = height;
 }
-
-//void load_object(GLuint obj) {
-//    vector<vec4> vertices;
-//    vector<vec2> uvCoords;
-//    vector<vec3> normals;
-//
-//    loadOBJ(objFiles[obj], vertices, uvCoords, normals);
-//    numVertices[obj] = vertices.size();
-//    // Create and load object buffers
-//    glGenBuffers(NumObjBuffers, ObjBuffers[obj]);
-//    glBindVertexArray(VAOs[obj]);
-//    glBindBuffer(GL_ARRAY_BUFFER, ObjBuffers[obj][PosBuffer]);
-//    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*posCoords*numVertices[obj], vertices.data(), GL_STATIC_DRAW);
-//    glBindBuffer(GL_ARRAY_BUFFER, ObjBuffers[obj][NormBuffer]);
-//    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*normCoords*numVertices[obj], normals.data(), GL_STATIC_DRAW);
-//    glBindBuffer(GL_ARRAY_BUFFER, 0);
-//
-//}
 
 void draw_obj(GLuint VAO, GLuint Buffer, int numVert) {
     glBindVertexArray(VAO);
