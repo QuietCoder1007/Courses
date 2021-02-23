@@ -4,7 +4,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"	// Sean Barrett's image loader - http://nothings.org/
 #include <stdio.h>
-#include <irrKlang>
+//#include <irrKlang>
 #include <vector>
 #include "vgl.h"
 #include "objloader.h"
@@ -25,7 +25,9 @@ GLuint Buffers[NumBuffers];
 
 GLint numVertices[NumVAOs];
 GLint posCoords = 4;
-vec4 cube_color = {1.0f, 0.0f, 0.0f,1.0f};
+vec4 cube_color_r = {1.0f, 0.0f, 0.0f,1.0f};
+vec4 cube_color_g = {0.0f, 1.0f, 0.0f,1.0f};
+vec4 cube_color_b = {0.0f, 0.0f, 1.0f,1.0f};
 
 // Camera
 vec3 eye = {3.0f, 3.0f, 0.0f};
@@ -175,7 +177,7 @@ void display( )
     }
 
     // TODO: Set perspective projection matrix
-    proj_matrix = ortho(-6.0f*xratio, 6.0f*xratio, -6.0f*yratio, 6.0f*yratio, -6.0f, 6.0f);
+    proj_matrix = ortho(-1.0f*xratio, 1.0f*xratio, -2.0f*yratio, 3.0f*yratio, -6.0f, 6.0f);
 
     // TODO: Set camera matrix
     camera_matrix = lookat(eye, center, up);
@@ -204,13 +206,89 @@ void render_scene( ) {
     // Set cube transformation matrix
     trans_matrix = translate(0.0f, 0.0f, 0.0f);
     rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
-    scale_matrix = scale(1.0f, 1.0f, 1.0f);
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
 	model_matrix = trans_matrix*rot_matrix*scale_matrix;
 	glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
-	glUniform4fv(vCol, 1, cube_color);
+	glUniform4fv(vCol, 1, cube_color_g);
 
 	// TODO: Draw cube
 	draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(0.0f, 0.0f, 0.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 0.10f, 4.0f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_b);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+
+    trans_matrix = translate(0.0f, 0.0f, 4.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    trans_matrix = translate(0.0f, 0.0f, -4.0f);
+    rot_matrix = rotate(0.0f, vec3(0.0f, 0.0f, 1.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(2.0f, 0.0f, 2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(2.0f, 0.0f, -2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(-2.0f, 0.0f, 2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
+
+    // Set cube transformation matrix
+    trans_matrix = translate(-2.0f, 0.0f, -2.0f);
+    rot_matrix = rotate(90.0f, vec3(0.0f, 1.0f, 0.0f));
+    scale_matrix = scale(2.0f, 2.0f, 0.1f);
+    model_matrix = trans_matrix*rot_matrix*scale_matrix;
+    glUniformMatrix4fv(model_mat_loc, 1, GL_FALSE, model_matrix);
+    glUniform4fv(vCol, 1, cube_color_r);
+
+    // TODO: Draw cube
+    draw_obj(VAOs[Cube], Buffers[CubePosBuffer], numVertices[Cube]);
 
 }
 
