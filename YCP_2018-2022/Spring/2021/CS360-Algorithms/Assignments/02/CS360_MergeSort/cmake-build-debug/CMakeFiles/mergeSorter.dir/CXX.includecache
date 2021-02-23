@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Spring/2021/CS360-Algorithms/Assignments/02/CS360_MergeSort/Utilities.h
+
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Spring/2021/CS360-Algorithms/Assignments/02/CS360_MergeSort/mergeSorter.cpp
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+Utilities.h
+C:/Users/lqlas/OneDrive/Documents/YCP_2018-2022/Spring/2021/CS360-Algorithms/Assignments/02/CS360_MergeSort/Utilities.h
+
